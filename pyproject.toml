@@ -15,9 +15,9 @@ classifiers = [
     "Topic :: Scientific/Engineering :: Mathematics",
     "Topic :: Software Development :: Libraries :: Python Modules",
     "Topic :: Software Development :: Libraries",
-],
-license = "Apache 2.0",
-keywords = "tensorflow addons machine learning",
+]
+license = "Apache 2.0"
+keywords = "tensorflow addons machine learning"
 dependencies = [
     "tensorflow>=2.16.0",
     "tf-keras>=2.16.0"
