@@ -15,7 +15,6 @@ classifiers = [
     "Topic :: Software Development :: Libraries :: Python Modules",
     "Topic :: Software Development :: Libraries",
 ]
-keywords = "tensorflow addons machine learning"
 dependencies = [
     "tensorflow>=2.16.0",
     "tf-keras>=2.16.0"
