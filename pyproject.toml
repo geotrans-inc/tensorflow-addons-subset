@@ -1,0 +1,24 @@
+[project]
+name = "tensorflow-addons-subset"
+description = "A subset of tensorflow-addons which only has the functions used in repositories owned by Geotrans."
+readme = "README.md"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Mathematics",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: Libraries",
+],
+license = "Apache 2.0",
+keywords = "tensorflow addons machine learning",
+dependencies = [
+    "tensorflow>=2.16.0",
+    "tf-keras>=2.16.0"
+]
