@@ -15,11 +15,11 @@
 """Python layer for distort_image_ops."""
 
 from typing import Optional
-import warnings
+# import warnings
 
 import tensorflow as tf
 
-from tensorflow_addons import options
+# from tensorflow_addons import options
 from tensorflow_addons.utils.resource_loader import LazySO
 from tensorflow_addons.utils.types import Number, TensorLike
 
@@ -183,21 +183,22 @@ def adjust_hsv_in_yiq(
         )
         scale_value = tf.cast(scale_value, dtype=image.dtype, name="scale_value")
 
-        if not options.is_custom_kernel_disabled():
-            warnings.warn(
-                "C++/CUDA kernel of `adjust_hsv_in_yiq` will be removed in Addons `0.13`.",
-                DeprecationWarning,
-            )
-            try:
-                image = _distort_image_so.ops.addons_adjust_hsv_in_yiq(
-                    image, delta_hue, scale_saturation, scale_value
-                )
-            except tf.errors.NotFoundError:
-                options.warn_fallback("adjust_hsv_in_yiq")
-                image = _adjust_hsv_in_yiq(
-                    image, delta_hue, scale_saturation, scale_value
-                )
-        else:
-            image = _adjust_hsv_in_yiq(image, delta_hue, scale_saturation, scale_value)
+        # if not options.is_custom_kernel_disabled():
+        #     warnings.warn(
+        #         "C++/CUDA kernel of `adjust_hsv_in_yiq` will be removed in Addons `0.13`.",
+        #         DeprecationWarning,
+        #     )
+        #     try:
+        #         image = _distort_image_so.ops.addons_adjust_hsv_in_yiq(
+        #             image, delta_hue, scale_saturation, scale_value
+        #         )
+        #     except tf.errors.NotFoundError:
+        #         options.warn_fallback("adjust_hsv_in_yiq")
+        #         image = _adjust_hsv_in_yiq(
+        #             image, delta_hue, scale_saturation, scale_value
+        #         )
+        # else:
+        #     image = _adjust_hsv_in_yiq(image, delta_hue, scale_saturation, scale_value)
+        image = _adjust_hsv_in_yiq(image, delta_hue, scale_saturation, scale_value)
 
         return tf.image.convert_image_dtype(image, orig_dtype)
