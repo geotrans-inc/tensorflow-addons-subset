@@ -1,5 +1,5 @@
 [project]
-name = "tensorflow-addons-subset"
+name = "tensorflow-addons"
 description = "A subset of tensorflow-addons which only has the functions used in repositories owned by Geotrans."
 version = "0.25.0"
 readme = "README.md"
