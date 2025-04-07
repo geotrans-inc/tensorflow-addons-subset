@@ -20,10 +20,10 @@ from typing import Optional
 import tensorflow as tf
 
 # from tensorflow_addons import options
-from tensorflow_addons.utils.resource_loader import LazySO
+# from tensorflow_addons.utils.resource_loader import LazySO
 from tensorflow_addons.utils.types import Number, TensorLike
 
-_distort_image_so = LazySO("custom_ops/image/_distort_image_ops.so")
+# _distort_image_so = LazySO("custom_ops/image/_distort_image_ops.so")
 
 
 def random_hsv_in_yiq(
